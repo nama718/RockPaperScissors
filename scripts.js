@@ -17,10 +17,10 @@ function getComputerChoice() {
 function getHumanChoice() {
     let sign = prompt("Enter Rock, Paper, or Scissors").toLowerCase();
         while (sign !== "rock" && sign !== "paper" && sign !== "scissors") {
-        sign = prompt("Invalid input. Please enter Rock, Paper, or Scissors").toLowerCase();
+        sign = prompt("Invalid Please enter Rock, Paper, or Scissors").toLowerCase();
     }
     
-    return sign;
+    return sign.toLowerCase();
 }
 
 function playRound(hChoice, cChoice) {
@@ -58,9 +58,9 @@ function playGame() {
     for (let i = 0; i < 5; i++) {
         const hSelection = getHumanChoice();
         const cSelection = getComputerChoice();
-        console.log(`You chose: ${hSelection}, Computer chose: ${cSelection}`);
+        console.log(`You Chose: ${hSelection}, Computer Chose: ${cSelection}`);
         // Get the result for the round and print it
-        const roundResult = playRound(hSelection, cSelection);
+        let roundResult = playRound(hSelection, cSelection);
         console.log(roundResult);
     }
 
